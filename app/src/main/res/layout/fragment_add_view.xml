@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/dimen_10"
+            android:text="@string/lbl_job_detail"
+            android:textColor="@color/white"
+
+            android:textSize="16sp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/desp_LAY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:paddingRight="@dimen/margin_5"
+                        android:text="@string/description"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/desc_EDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_round_corner"
+                        android:gravity="top|left"
+                        android:hint="@string/description"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/dimen_80"
+                        android:padding="@dimen/dimen_10" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/desp_LAY"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen_10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_5"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:paddingRight="@dimen/margin_5"
+                        android:text="Time and Material"
+                        android:textColor="@color/black" />
+
+                    <ScrollView
+                        android:id="@+id/dynamic_sv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_220"
+                        android:layout_below="@+id/common_include_layout"
+                        android:nestedScrollingEnabled="true">
+
+                        <LinearLayout
+                            android:id="@+id/dynamic_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_round_corner"
+                            android:orientation="vertical">
+
+                            <!--   <include
+                                   layout="@layout/inflate_add_item"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"></include>-->
+
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                    <TextView
+                        android:id="@+id/add_material_TXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/dimen_10"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:paddingRight="@dimen/margin_5"
+                        android:text="@string/add_material"
+                        android:textColor="@color/colorPrimary" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:paddingTop="@dimen/dimen_10"
+                        android:paddingRight="@dimen/margin_5">
+
+                        <TextView
+                            android:id="@+id/add_job_TXT"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_grey_round_corner"
+                            android:gravity="center"
+                            android:padding="@dimen/dimen_10"
+                            android:paddingLeft="@dimen/margin_5"
+                            android:paddingRight="@dimen/margin_5"
+                            android:text="@string/add"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:id="@+id/submit_TXT"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/bg_color_round_corner"
+                            android:gravity="center"
+                            android:padding="@dimen/dimen_10"
+                            android:paddingLeft="@dimen/dimen_10"
+                            android:paddingRight="@dimen/margin_5"
+                            android:text="@string/submit"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

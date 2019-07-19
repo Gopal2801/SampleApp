@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/spalsh_IM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_action_business"
+        android:tint="@color/colorPrimary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spalsh_IM"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/dimen_5"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+</RelativeLayout>
